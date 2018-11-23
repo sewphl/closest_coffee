@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative "../../closest_coffee/lib/closest_coffee/version"
+require_relative "../../closest_coffee/lib/closest_coffee/cli"
+ClosestCoffee::CLI.new.run

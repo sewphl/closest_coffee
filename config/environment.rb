@@ -1,0 +1,11 @@
+##require 'pry'
+require 'nokogiri'
+require 'open-uri'
+require 'csv'
+require 'geokit'
+
+require_relative '../lib/closest_coffee/scraper'
+require_relative '../lib/closest_coffee/helper'
+require_relative '../lib/closest_coffee/shop'
+require_relative '../lib/closest_coffee/cli'
+require_relative '../lib/closest_coffee/version'
