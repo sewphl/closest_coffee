@@ -6,7 +6,7 @@ This Ruby Gem provides a CLI to view 22 Eater-recommended coffee shops in Philly
 
 ## Installation
 
-$ gem install closest_coffee-0.1.0
+$ gem install closest_coffee
 
 
 ## Usage
