@@ -1,14 +1,6 @@
-require_relative "../../lib/closest_coffee/scraper.rb"
-require_relative "../../lib/closest_coffee/shop.rb"
-require_relative "../../lib/closest_coffee/helper.rb"
-require 'nokogiri'
-require 'colorize'
-require 'pry'
-
 class ClosestCoffee::CLI
     
     def run
-        ##puts Dir.pwd
         get_coffee
         myCLI
     end
@@ -19,7 +11,7 @@ class ClosestCoffee::CLI
     end
     
     def myCLI
-        puts "It's not always sunny in Philadelphia.\nEnter your zipcode for a list of Eater's favorite Philly coffee shops, ordered by distance from you:\n\n".colorize(:blue)
+        puts "Enter your zipcode for a list of Eater's favorite Philly coffee shops, ordered by distance from you:\n\n".colorize(:blue)
         puts "Note: Some helpful zipcodes if you're visiting:\n\n19104 for University City,\n19125 for Fishtown/Kensington,\n19107 for Chinatown, or\n19147 for Queen Village/Bella Vista/Italian Market:".colorize(:red) + "\n\n"
         myzip = gets.strip
         until ClosestCoffee::Helper.valid_zip(myzip)

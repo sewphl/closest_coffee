@@ -1,14 +1,13 @@
 class ClosestCoffee::Shop
 
-    ##note: all attributes except dist will come from the Scraper.
-    ##dist is calculated and added in the Helper class, once the user enters their zipcode.
+    ##note: all attributes except dist will be updated using data generated from the Scraper.
+    ##note: dist is calculated and updated once user inputs their zipcode via CLI (added via Helper method, called from CLI).
     attr_accessor :name, :desc, :addr, :phone, :web, :dist
 
     @@all = []
     
     def initialize(shop_hash)
         shop_hash.each do |key, val|
-            ##stackoverflow.com/questions/973452/calling-self-send-iteratively-on-a-hash-argument-to-initialize
             self.send "#{key}=", val
         end
         @@all << self

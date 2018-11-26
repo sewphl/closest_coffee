@@ -1,7 +1,3 @@
-require 'open-uri'
-require 'pry'
-require 'nokogiri'
-
 class ClosestCoffee::Scraper
     def self.getme
         arr_n = []
@@ -9,7 +5,7 @@ class ClosestCoffee::Scraper
         get_coffee = Nokogiri::HTML(open("https://philly.eater.com/maps/best-coffee-shops-philadelphia"))
 
         doc = get_coffee.css(".c-mapstack__card")
-        #for i in (1..24).to_a.except(7,17) ##7 is newsletter and 17 is related-links.
+        ##because 7 is newsletter and 17 is related-links:
         for i in ((1..6).to_a).concat((8..16).to_a).concat((18..24).to_a)
             shp = {
                 name: doc[i].css(".c-mapstack__card-hed h1").text.gsub(/\n\d+\.\ /,"").rstrip,

@@ -3,6 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'csv'
 require 'geokit'
+require 'colorize'
 
 require_relative '../lib/closest_coffee/scraper'
 require_relative '../lib/closest_coffee/helper'

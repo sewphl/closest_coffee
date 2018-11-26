@@ -1,10 +1,8 @@
-require 'csv'
-require 'geokit'
-
 class ClosestCoffee::Helper
 
+filedir = __dir__
 ##note: this csv comes from https://gist.github.com/erichurst/7882666
-CSVTEXT = File.read("../lib/closest_coffee/zips/zips.txt")
+CSVTEXT = File.read(filedir + "/zips/zips.txt")
 THECSV = CSV.parse(CSVTEXT, :headers => true)
 
     def self.zip_to_lat_lng(myzip)
@@ -18,7 +16,7 @@ THECSV = CSV.parse(CSVTEXT, :headers => true)
         ClosestCoffee::Shop.all.each do |shop|
             shopLL = zip_to_lat_lng(shop.addr.split(//).last(5).join)
             destination = Geokit::LatLng.new(shopLL[0],shopLL[1])
-            ##add dist attribute (distance from user loc) to shop instance.
+            ##update dist attribute (distance from user loc) for shop instance.
             shop.dist = current_location.distance_to(destination)
         end
         ##return shop objects in order of distance from user.

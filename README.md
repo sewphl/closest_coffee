@@ -1,32 +1,18 @@
 # ClosestCoffee
 
-##This is a gem written by seawphl. 
+##This is a gem written by sewphl. 
 
 This Ruby Gem provides a CLI to view 22 Eater-recommended coffee shops in Philly in order of how close in proximity they are to the user.
 
 ## Installation
 
-$ gem install closest_coffee
+$ gem install closest_coffee-0.1.0
 
-
-##Add this line to your application's Gemfile:
-
-##```ruby
-##gem 'closest_coffee'
-##```
-
-##And then execute:
-
-##    $ bundle
-
-##Or install it yourself as:
-
-##    $ gem install closest_coffee
 
 ## Usage
 
 Type the below and follow the on-screen prompts.
-$ closest_coffee
+$ 'closest_coffee
 
 ## Development
 
