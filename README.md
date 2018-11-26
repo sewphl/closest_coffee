@@ -12,7 +12,8 @@ $ gem install closest_coffee
 ## Usage
 
 Type the below and follow the on-screen prompts.
-$ 'closest_coffee
+
+$ closest_coffee
 
 ## Development
 
